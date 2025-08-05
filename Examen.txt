@@ -1,0 +1,4 @@
+-Sintonizado PID
+-Ziegler-Nichols (LA y LC)
+-Estados
+-Modelar un sistema

@@ -1,0 +1,26 @@
+L = 23/100;
+R = 3.5/100;
+vr_op
+vl_op = ;
+
+A = [0 0 -R/2 * (vr_op + vl_op) * sin(theta_op);
+    0 0  R/2 * (vr_op + vl_op) * cos(theta_op);
+    0 0 0];
+    
+B = [R/2 * cos(theta_op) - R/2 * sin(theta_op)   R/2 * cos(theta_op) - R/2 * sin(theta_op);
+    R/2 * sin(theta_op) + R/2 * cos(theta_op)   R/2 * sin(theta_op) + R/2 * cos(theta_op);
+    R/L -R];
+
+C = [1 0 0];
+
+D = [0 0];
+
+%theta_op = 1;
+%V_op = 1;
+
+%A = [0 theta_op; V_op 0];
+%B = [1 0; 0 1];
+%C = [0 0];
+%D = 0;
+
+sys = ss(A, B, C, D);
